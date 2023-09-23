@@ -1,0 +1,35 @@
+#root {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 1500ms;
+}
+
+.card:hover {
+  transform: rotateX(180deg);
+}
+
+.front, .back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  opacity: .50;
+}
+
+
+.back {
+  transform: rotateX(180deg);
+}
