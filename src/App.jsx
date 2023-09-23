@@ -17,8 +17,17 @@ const App = () => {
     {q: "The difference between two sets is not _", a: "commutative"},
     {q: "However, _ is commutative", a: "symmetric difference"},
   ]
+  const handlePrevClick = () => {
+    if (cardNumber == 0) {
+      return;
+    }
+    updateCardNumber(cardNumber - 1);
+  }
 
-  const handleClick = () => {
+  const handleNextClick = () => {
+    if (cardNumber == questionsAndAnswers.length - 1) {
+      return;
+    }
     updateCardNumber(cardNumber + 1);
   }
 
@@ -28,7 +37,10 @@ const App = () => {
       <h2>How well do you know your set definitions and laws? Test your knowledge!</h2>
       <h5>Number of cards: {questionsAndAnswers.length}</h5>
       <Card question={questionsAndAnswers[cardNumber]['q']} answer={questionsAndAnswers[cardNumber]['a']} />
-      <button onClick={handleClick}>Next</button>
+      <div class="button-panel">
+        <button onClick={handlePrevClick}>Previous</button>
+        <button onClick={handleNextClick}>Next</button>
+      </div>
     </>
   )
 }
