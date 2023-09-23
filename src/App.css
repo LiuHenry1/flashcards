@@ -16,7 +16,7 @@
   transition: 1500ms;
 }
 
-.card:hover {
+.flipped {
   transform: rotateX(180deg);
 }
 
