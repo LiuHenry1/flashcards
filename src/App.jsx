@@ -37,7 +37,7 @@ const App = () => {
       <h2>How well do you know your set definitions and laws? Test your knowledge!</h2>
       <h5>Number of cards: {questionsAndAnswers.length}</h5>
       <Card question={questionsAndAnswers[cardNumber]['q']} answer={questionsAndAnswers[cardNumber]['a']} />
-      <div class="button-panel">
+      <div className="button-panel">
         <button onClick={handlePrevClick}>Previous</button>
         <button onClick={handleNextClick}>Next</button>
       </div>
