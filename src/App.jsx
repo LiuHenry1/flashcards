@@ -3,6 +3,8 @@ import './App.css'
 import Card from './components/Card.jsx'
 
 const App = () => {
+  const [cardNumber, updateCardNumber] = useState(0);
+
   const questionsAndAnswers = [
     {q: "What is a set?", a: "An unordered collection of objects"}, 
     {q: "What are the objects of a set called?", a: "Elements"},
@@ -15,11 +17,18 @@ const App = () => {
     {q: "The difference between two sets is not _", a: "commutative"},
     {q: "However, _ is commutative", a: "symmetric difference"},
   ]
+
+  const handleClick = () => {
+    updateCardNumber(cardNumber + 1);
+  }
+
   return (
     <>
       <h1>Set Theory Study Guide</h1>
       <h2>How well do you know your set definitions and laws? Test your knowledge!</h2>
-      <h5>Number of cards: </h5>
+      <h5>Number of cards: {questionsAndAnswers.length}</h5>
+      <Card question={questionsAndAnswers[cardNumber]['q']} answer={questionsAndAnswers[cardNumber]['a']} />
+      <button onClick={handleClick}>Next</button>
     </>
   )
 }
