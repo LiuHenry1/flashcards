@@ -14,6 +14,8 @@
   position: relative;
   transform-style: preserve-3d;
   transition: 1500ms;
+  background-color: rgba(255, 255, 255, 0.535);
+  perspective: 1000px;
 }
 
 .flipped {
@@ -28,7 +30,8 @@
   height: 100%;
   position: absolute;
   backface-visibility: hidden;
-  opacity: .50;
+  font-size: 2rem;
+  font-weight: 100;
 }
 
 
@@ -45,4 +48,5 @@
 .button-panel > button {
   width: 100px;
   height: 25px;
+  box-shadow: 0 0 40px 0 rgba(0,0,0,.45);
 }
