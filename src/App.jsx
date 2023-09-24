@@ -34,7 +34,7 @@ const App = () => {
   return (
     <>
       <h1>Set Theory Study Guide</h1>
-      <h2>How well do you know your set definitions and laws? Test your knowledge!</h2>
+      <h2>How well do you know your set vocabulary? Test your knowledge!</h2>
       <h5>Number of cards: {questionsAndAnswers.length}</h5>
       <Card question={questionsAndAnswers[cardNumber]['q']} answer={questionsAndAnswers[cardNumber]['a']} key={cardNumber} />
       <div className="button-panel">
