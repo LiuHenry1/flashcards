@@ -38,8 +38,8 @@ const App = () => {
       <h5>Number of cards: {questionsAndAnswers.length}</h5>
       <Card question={questionsAndAnswers[cardNumber]['q']} answer={questionsAndAnswers[cardNumber]['a']} key={cardNumber} />
       <div className="button-panel">
-        <button onClick={handlePrevClick}>Previous</button>
-        <button onClick={handleNextClick}>Next</button>
+        <button id="prevBtn" onClick={handlePrevClick}>←</button>
+        <button id="nextBtn" onClick={handleNextClick}>➝</button>
       </div>
     </>
   )
