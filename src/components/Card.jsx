@@ -1,11 +1,12 @@
 import { useState } from "react";
 
 const Card = ({question, answer}) => {
-  const [isFlipped, flip] = useState(false);
+  const [isFlipped, toggleFlip] = useState(false);
 
   const handleCardClick = () => {
-    flip(!isFlipped);
+    toggleFlip(!isFlipped);
   }
+
 
   if (isFlipped) {
     return (
