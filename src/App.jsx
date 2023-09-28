@@ -26,17 +26,13 @@ const App = () => {
   }
 
   const handleNextClick = () => {
-    if (tracker.previous.length == questionsAndAnswers.length - 1) {
-      return; 
-    }
-    
     const min = 0;
     const max = questionsAndAnswers.length - 1;
 
     let next;
     do {
       next = Math.floor(Math.random() * (max - min + 1) + min);
-    } while (next == tracker.current || tracker.previous.includes(next))
+    } while (next == tracker.current)
     tracker.previous.push(tracker.current);
     updateTracker({...tracker, current: next});
   }
