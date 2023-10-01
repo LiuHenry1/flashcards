@@ -11,7 +11,7 @@ const AnswerSpace = ({value, handleInput, handleSubmit, status}) => {
         onChange={handleInput}
         placeholder="Enter your guess here!"
       />
-      <input type="submit"/>
+      <input className="submit-answer" type="submit"/>
     </form>
   );
 };
