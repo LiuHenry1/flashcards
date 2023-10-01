@@ -5,6 +5,7 @@ import Card from './components/Card.jsx'
 const App = () => {
   const [previous, setPrevious] = useState([]);
   const [current, setCurrent] = useState(0);
+  const [isFlipped, setView] = useState(false);
 
   const questionsAndAnswers = [
     {q: "What is a set?", a: "An unordered collection of objects"}, 
@@ -23,6 +24,7 @@ const App = () => {
       return;
     }
     const next = previous[previous.length - 1];
+    setView(false);
     setPrevious(previous.slice(0, -1));
     setCurrent(next);
   }
@@ -35,8 +37,13 @@ const App = () => {
     do {
       next = Math.floor(Math.random() * (max - min + 1) + min);
     } while (next == current)
+    setView(false);
     setPrevious([...previous, current]);
     setCurrent(next);
+  }
+
+  const handleCardClick = () => {
+    setView(!isFlipped);
   }
 
   return (
@@ -44,7 +51,7 @@ const App = () => {
       <h1>Set Theory Study Guide</h1>
       <h2>How well do you know your set vocabulary? Test your knowledge!</h2>
       <h5>Number of cards: {questionsAndAnswers.length}</h5>
-      <Card question={questionsAndAnswers[current]['q']} answer={questionsAndAnswers[current]['a']} key={current} />
+      <Card question={questionsAndAnswers[current]['q']} answer={questionsAndAnswers[current]['a']} isFlipped={isFlipped} handleClick={handleCardClick} key={current}/>
       <div className="button-panel">
         <button id="prevBtn" onClick={handlePrevClick}>←</button>
         <button id="nextBtn" onClick={handleNextClick}>➝</button>

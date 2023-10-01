@@ -1,36 +1,10 @@
-import { useState } from "react";
-
-const Card = ({question, answer}) => {
-  const [isFlipped, toggleFlip] = useState(false);
-
-  const handleCardClick = () => {
-    toggleFlip(!isFlipped);
-  }
-
-
-  if (isFlipped) {
-    return (
-      <div className="card flipped" onClick={handleCardClick}>
-        <div className="front">
-          {question}
-        </div>
-        <div className="back">
-          {answer}
-        </div>
-      </div>
-    )
-  } 
+const Card = ({ question, answer, isFlipped, handleClick }) => {
   return (
-    <div className="card" onClick={handleCardClick}>
-      <div className="front">
-        {question}
-      </div>
-      <div className="back">
-        {answer}
-      </div>
+    <div className={"card" + (isFlipped ? " flipped" : "")} onClick={handleClick}>
+      <div className="front">{question}</div>
+      <div className="back">{answer}</div>
     </div>
-  )
-    
-}
+  );
+};
 
 export default Card;
