@@ -27,6 +27,18 @@
   transform: rotateX(180deg);
 }
 
+.easy {
+  background-color: rgba(0, 255, 38, 0.461);
+}
+
+.medium {
+  background-color: rgba(205, 221, 25, 0.6);
+}
+
+.hard {
+  background-color: rgba(233, 16, 16, 0.528);
+}
+
 .front, .back {
   display: flex;
   justify-content: center;
