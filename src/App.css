@@ -13,7 +13,7 @@
   border: 1px solid black;
   position: relative;
   transform-style: preserve-3d;
-  transition: 1500ms;
+  transition: 1000ms;
   background-color: rgba(255, 255, 255, 0.535);
   perspective: 1000px;
 
@@ -39,7 +39,6 @@
   font-size: 2rem;
   font-weight: 100;
 }
-
 
 .back {
   transform: rotateX(180deg);
