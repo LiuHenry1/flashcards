@@ -1,5 +1,5 @@
-const Card = ({ question, answer, isFlipped, handleClick }) => {
-  const className = "card" + (isFlipped ? " flipped" : "");
+const Card = ({ question, answer, difficulty, isFlipped, handleClick }) => {
+  const className = "card " + difficulty + (isFlipped ? " flipped" : "") ;
   return (
     <div className={className} onClick={handleClick}>
       <div className="front">{question}</div>
