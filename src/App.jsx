@@ -77,6 +77,7 @@ const App = () => {
       <Card
         question={questionsAndAnswers[current]["q"]}
         answer={questionsAndAnswers[current]["a"]}
+        difficulty={questionsAndAnswers[current]["difficulty"]}
         isFlipped={isFlipped}
         handleClick={handleCardClick}
         key={current}
