@@ -68,3 +68,28 @@ button:hover {
 #nextBtn {
   background-color: rgba(9, 247, 9, 0.309);
 }
+
+form {
+  margin-top: 2rem;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.user-input {
+  appearance: none;
+  border: 1;
+  padding: 0;
+  font-size: 16px;
+  width: 300px;
+  text-align: center;
+}
+.correct {
+  border-color: green;
+}
+
+.wrong {
+  border-color: red;
+}
