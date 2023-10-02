@@ -91,12 +91,12 @@ form {
 }
 
 .user-input {
-  margin-top: -1;
-  position: relative;
   border-radius: 1.5rem;
   background-color:azure;
   appearance: none;
   border-color: transparent;
+  border-width: 5px;
+  box-shadow: none;
   padding: 0;
   font-size: 16px;
   width: 75%;
