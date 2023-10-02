@@ -4,7 +4,7 @@ const AnswerSpace = ({value, handleInput, handleSubmit, status}) => {
     className += status;
   }
   return (
-    <form action={handleSubmit} onSubmit={handleSubmit}>
+    <form action="" onSubmit={handleSubmit}>
       <input className={className}
         type="text"
         value={value}
