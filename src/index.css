@@ -1,5 +1,8 @@
 body {
+  font-family: Helvetica,Arial,sans-serif;
   height: 100vh;
   overflow: hidden;
-  background: linear-gradient(60deg, rgb(3, 137, 226), rgba(229, 6, 6, 0.442));
+  /* From Unsplash by Dustin Humes*/
+  background-image: url(https://images.unsplash.com/photo-1595561143661-2532f8fa2248?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3117&q=80);
+  background-size: cover;
 }
