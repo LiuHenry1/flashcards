@@ -53,11 +53,11 @@ const App = () => {
   };
 
   const handleSubmit = (e) => {
+    e.preventDefault();
     if (userAnswer === "") {
       return;
     }
-    
-    e.preventDefault();
+  
     const userAnswerLower = userAnswer.toLowerCase();
     const correctAnswerLower = 
       questionsAndAnswers[current]["a"].toLowerCase();
