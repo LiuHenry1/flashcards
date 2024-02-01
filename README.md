@@ -48,7 +48,7 @@ I did learn a lot from this project in terms of how states persist and reset thr
 
 ## License
 
-    Copyright [2023] [Henry Liu]
+    Copyright 2023 Henry Liu
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
